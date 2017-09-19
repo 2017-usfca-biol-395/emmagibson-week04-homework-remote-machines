@@ -24,7 +24,8 @@ for file in $@
 do
 	echo "#####################################################"
 	echo "Output for ${file##*/}"
-	echo "Size = $lsb(cut -b $file)"
+	echo "Size = $(cut -b $file)"
+	echo "Number of sequences = $(grep -c "^>" $file)"
 	echo "First three lines:"
 	head -3 $file
 	echo "Last three lines:"
