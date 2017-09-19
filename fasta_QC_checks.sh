@@ -26,6 +26,8 @@ do
 	echo "Output for ${file##*/}"
 	echo "Size = $(cut -b $file)"
 	echo "Number of sequences = $(grep -c "^>" $file)"
+	echo "Sequence Names:"
+	echo "$(grep ">" $file | sort)"
 	echo "First three lines:"
 	head -3 $file
 	echo "Last three lines:"
