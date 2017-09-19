@@ -24,12 +24,16 @@ for file in $@
 do
 	echo "#####################################################"
 	echo "Output for ${file##*/}"
-	echo "Size = $(cut -b $file)"
+	echo "Size = $lsb(cut -b $file)"
 	echo "First three lines:"
 	head -3 $file
+	echo "Last three lines:"
+	tail -3 $file
 done
 
 #POTENTIAL ISSUE: figure out how to get line breaks between outputs
 
 #POTENTIAL ISSUE: 'head -3' isn't an ideal command because 
 #	some of the files don't start with the sequences
+
+#POTENTIAL ISSUE: 'tail -3' has similar issues to 'head -3'
