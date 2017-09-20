@@ -24,7 +24,7 @@ for file in $@
 do
 	echo "#####################################################"
 	echo "Output for ${file##*/}"
-	echo "Size = $(cut -b $file)"
+	echo "Size = $(du -h "$file")"
 	echo "Number of sequences = $(grep -c "^>" $file)"
 	echo "Sequence Names:"
 	echo "$(grep ">" $file | sort)"
