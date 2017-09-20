@@ -43,7 +43,7 @@ do
 	echo " "
 # lists sequence names in alphabetical order
         echo "Sequence Names:"
-        echo "$(grep ">" -f2 $file | sort)"
+        echo "$(grep ">" $file | sort)"
 done
 
 #POTENTIAL ISSUE: 'head -3' isn't an ideal command because 
