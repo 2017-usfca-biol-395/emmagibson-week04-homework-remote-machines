@@ -1,13 +1,13 @@
 
-#Week 5 Remote Machine & Fasta QC Homerork Reflection
+# Week 5 Remote Machine & Fasta QC Homerork Reflection
 
 
-##Overall Thoughts
+## Overall Thoughts
 Overall, this assignment was very useful, because it both taught me new unix commands and
 helped meget used to working with .fasta files. I had some trouble getting the file size
 to display correctly, but figuring it out helped me learn about how to use pipes.
 
-##Challenges
+## Challenges
 One of the only issues I couldn't solve was the output of someof the last/first 3 lines.
 Some of the files had blank or extremely long lines at the beginning or end, and I wanted
 to find a way to make those outputs look prettier. In the end, I decided that it was best
