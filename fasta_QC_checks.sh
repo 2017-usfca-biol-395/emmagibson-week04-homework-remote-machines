@@ -15,17 +15,17 @@ echo "unzipped data files"
 echo "$(date)"
 echo "Output from preliminary quality control checks on selected .fasta files."
 echo "Output for each .fasta includes:"
-echo "Filename, file size, first three lines, last three lines, the number of"
-echo "sequences in each file, and the sequence identifier lines, sorted alphabetically."
+echo "Filename, file size, the number of sequences in each file, first three lines,"
+echo "last three lines, and the sequence identifier lines, sorted alphabetically."
 
 # for loop to do the above for each .fasta
 # run with the argument data/*.fasta for desires result
 for file in $@
 do
 	echo " "
-	echo " "
 	echo "#####################################################"
 # prints file name without suffixes (data/example.fasta becomes ecample.fasta)
+	echo " "
 	echo "Output for ${file##*/}"
 	echo " "
 # prints file size without file name
@@ -44,8 +44,5 @@ do
 # lists sequence names in alphabetical order
         echo "Sequence Names:"
         echo "$(grep ">" $file | sort)"
+	echo " "
 done
-
-#POTENTIAL ISSUE: 'head -3' isn't an ideal command because 
-#	some of the files don't start with the sequences
-#POTENTIAL ISSUE: 'tail -3' has similar issues to 'head -3'
